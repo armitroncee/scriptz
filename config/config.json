@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "F1labslab!1",
+=======
+    "password": null,
+>>>>>>> 15b71565c101125658cf36ded665f67901794be1
     "database": "scriptz_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

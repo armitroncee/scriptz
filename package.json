@@ -27,8 +27,12 @@
     "cli": "^1.0.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+<<<<<<< HEAD
     "mysql": "^2.15.0",
     "mysql2": "^1.5.2",
+=======
+    "mysql2": "^1.5.3",
+>>>>>>> 15b71565c101125658cf36ded665f67901794be1
     "sequelize": "^4.37.1"
   },
   "devDependencies": {}

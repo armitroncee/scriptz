@@ -1,0 +1,23 @@
+div {
+    /*border: 2px solid black;*/
+    margin: 10px;
+  }
+  body {
+	
+    /*background-image: url("../../assets/images/mistymountains.png");  */
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron {
+  padding: -10px;
+}
+
+/* css for sign up page  */
+/* https://codepen.io/juff03/pen/OXaXRG */
+#success_message{ display: none;}
+
+
+
