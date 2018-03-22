@@ -1,9 +1,8 @@
 div {
     /*border: 2px solid black;*/
-    margin: 10px;
+   /* margin: 10px;*/
   }
-  body {
-	
+body {
     /*background-image: url("../../assets/images/mistymountains.png");  */
     height: 100%; 
     background-position: center;
@@ -12,12 +11,17 @@ div {
 }
 
 .jumbotron {
-  padding: -10px;
+    padding-bottom: 0;    
+}
+
+#addMedicationForms {
+    width: 75%;
+}
+
+#submit {
+  margin-bottom: 2rem;
 }
 
 /* css for sign up page  */
 /* https://codepen.io/juff03/pen/OXaXRG */
 #success_message{ display: none;}
-
-
-

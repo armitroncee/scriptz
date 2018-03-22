@@ -1,5 +1,4 @@
 <!-- pill box display  -->
-<!-- Sign in /sigh up page  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +10,11 @@
 <!-- link to local style sheet -->
  
   <!-- <link rel="stylesheet" type="text/css" href="./assets/css/minty.css"> -->
-
-  <link rel="stylesheet" type="text/css" href="/css/flatly.css">
-
+  <link rel="stylesheet" type="text/css" href="./assets/css/flatly.css">
   <!-- <link rel="stylesheet" type="text/css" href="./assets/css/spacelab.css"> -->
   
-
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<!-- Local CSS Style Sheet   -->
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
 <!-- link to local js  -->
    <!-- Optional JavaScript -->
@@ -38,49 +35,93 @@
     <ul class="navbar-nav mr-auto">
         <button type="button" class="btn btn-secondary">
       <li class="nav-item active">
-        <a class="nav-link" href="/home">Home
+        <a class="nav-link" href="index.html">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
       </button>
       <button type="button" class="btn btn-secondary">
       <li class="nav-item">
-        <a class="nav-link" href="/pill-box">Pill Box</a>
+        <a class="nav-link" href="pill-box.html">Pill Box</a>
       </li>
     </button>
     <button type="button" class="btn btn-secondary">
       <li class="nav-item">
-        <a class="nav-link" href="/med-list">Medication List</a>
+        <a class="nav-link" href="med-list.html">Medication List</a>
       </li>
     </button>
     <button type="button" class="btn btn-secondary">
       <li class="nav-item">
-        <a class="nav-link" href="/sign-up">Sign Up </a>
+        <a class="nav-link" href="sign-up.html">Sign Up </a>
       </li>
     </button> 
     </ul>
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
   </div>
 </nav>
 
 <div class="jumbotron">
-  <h1 class="display-3">My Medications</h1>
+  <h1 class="display-3">Medication Schedule</h1>
   <p class="lead"></p>
   <hr class="my-4">
 </div>
-<!-- bootstrap tool tip  https://v4-alpha.getbootstrap.com/components/tooltips/ -->
-<div class="container-fluid" >
-  <div class="row" >
-     <div class="card border-secondary mb-3" style="max-width: 20rem;">
-      <div class="card-header">Header</div>
+
+<!-- Top Row -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card border-secondary mb-3">
+      <div class="card-header"><h4>Morning</h4></div>
       <div class="card-body">
-        <h4 class="card-title">Secondary card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
+        <p class="card-text">Med: </p>
+      </div>  
     </div>
+
+    </div>
+    <div class="col-md-6">
+      <div class="card border-secondary mb-3">
+      <div class="card-header"><h4>Lunch Time</h4></div>
+      <div class="card-body">
+        <p class="card-text">Med: </p>
+      </div>  
+    </div>      
+
+    </div>
+  </div>
+</div>
+<!-- Bottom Row -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card border-secondary mb-3">
+      <div class="card-header"><h4>Dinner Time</h4></div>
+      <div class="card-body">
+        <p class="card-text">Med: </p>
+      </div>  
+    </div>
+
+    </div>
+    <div class="col-md-6">
+      <div class="card border-secondary mb-3">
+      <div class="card-header"><h4>Before Bed</h4></div>
+      <div class="card-body">
+        <p class="card-text">Med: </p>
+      </div>  
+    </div>      
+
+    </div>
+  </div>
+</div>
+<!-- bootstrap tool tip  https://v4-alpha.getbootstrap.com/components/tooltips/ -->
+
+<!-- Meds Taken -->
+<div class="container-fluid">
+<div class="card border-secondary mb-3">
+      <div class="card-header"><h4>Meds Taken</h4></div>
+      <div class="card-body">
+        <p class="card-text">Med: </p>
+      </div>  
+    </div>    
+    </div>  
   
   <!-- Optional JavaScript -->
    <!-- JS, Popper.js, and jQuery -->
