@@ -8,10 +8,20 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER, 
         allowNull: false
       },
-      when: {
+      TimeFrame: {
           type: DataTypes.STRING,
           allowNull: false
+      },
+      Pills_Remaining:{
+        type: DataTypes.INTEGER,
+        allowNull:false
       }
+
+    },{
+       freezeTableName: true,
+       timestamps: false
     });
+
+
     return scriptz;
   };
