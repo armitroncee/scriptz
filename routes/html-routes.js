@@ -16,7 +16,11 @@ module.exports = function(app) {
   });
 
   app.get("/med-list", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/med-list.html"));
+    db.scriptz.findAll({}).then(function(data){
+      var hbsObject = { scriptz: data };
+      res.render("med-list", hbsObject);
+      })
+    // res.sendFile(path.join(__dirname, "../public/med-list.html"));
   });
 
   app.get("/sign-up", function(req, res) {
