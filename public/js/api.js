@@ -27,7 +27,14 @@ $(document).on("click", "#deactivate", function(event){
     location.reload()
 })
 
+$("#button3").on("click", funtcion(event){
+  event.preventDefault
+  var id = $("#inlineFormInputGroupUsername2").text
+  console.log("id", id)
 
+  
+
+});
 
 
 
