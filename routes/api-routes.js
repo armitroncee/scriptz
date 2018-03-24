@@ -16,7 +16,7 @@ module.exports = function(app) {
     }
     }).then(function(data) {
         // res.json(data);
-        res.redirect("/med-list")
+        // res.redirect("/med-list")
     });
   });
 

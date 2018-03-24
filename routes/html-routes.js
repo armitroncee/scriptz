@@ -11,9 +11,21 @@ module.exports = function(app) {
     res.redirect("/home")
   });
 
-  app.get("/pill-box", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/pill-box.html"));
-  });
+  // app.get("/pill-box", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/pill-box.html"));
+  // });
+
+  app.get("/pill-box", function(req,res){
+    db.scriptz.findAll({      
+      where: {
+      TimeFrame: "morning"
+    }
+  }).then(function(data){
+      var hbsObject = { scriptz: data }
+
+      res.render("pill-box", hbsObject);
+    })
+  })
 
   app.get("/med-list", function(req, res) {
     db.scriptz.findAll({}).then(function(data){
@@ -26,4 +38,8 @@ module.exports = function(app) {
   app.get("/sign-up", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/sign-up.html"));
   });
+
+  app.get("/about", function(req,res){
+    res.sendFile(path.join(__dirname, "../public/about.html"))
+  })
 }
