@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       TimeFrame: {
           type: DataTypes.STRING,
-          allowNull: false
+          allowNull: true
       },
       Pills_Remaining:{
         type: DataTypes.INTEGER,
