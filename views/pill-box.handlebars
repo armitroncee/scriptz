@@ -15,7 +15,7 @@
       </button>
       <button type="button" class="btn btn-secondary">
       <li class="nav-item">
-        <a class="nav-link" href="/pill-box">Pill Box</a>
+        <a class="nav-link" id="pill-box" href="/pill-box">Pill Box</a>
       </li>
     </button>
     <button type="button" class="btn btn-secondary">
@@ -45,7 +45,7 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Morning</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptz}}<p>{{this.prescription_name}}</p> {{/each}} </p>
+        <p class="card-text">Med: {{#each scriptz}}<p>{{this.prescription_name}} </p>{{/each}} </p>
       </div>  
     </div>
 
@@ -54,7 +54,7 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Lunch Time</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: </p>
+        <p class="card-text">Med: {{#each scriptzLunch}} <p>{{this.prescription_name}}</p> {{/each}}</p>
       </div>  
     </div>      
 
@@ -68,7 +68,7 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Dinner Time</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptz}} {{#ifEqual "Morning" "Morning"}}<p>{{this.prescription_name}}</p> {{/ifEqual}} {{/each}} </p>
+        <p class="card-text">Med: {{#each scriptzDinner}} <p>{{this.prescription_name}}</p> {{/each}}</p>
       </div>  
     </div>
 
@@ -77,10 +77,9 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Before Bed</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: </p>
+        <p class="card-text">Med: {{#each scriptzBed}} <p>{{this.prescription_name}}</p> {{/each}}</p>
       </div>  
     </div>      
-
     </div>
   </div>
 </div>
@@ -92,7 +91,7 @@
         <p class="card-text">Med: </p>
       </div>  
   </div>    
-  </div>  
+  </div> 
   <footer>
       <br><br><br>
     <div class="panel-footer" align="center"><a href="/about">About Scriptz</a></div>

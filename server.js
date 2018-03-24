@@ -18,18 +18,6 @@ app.use(methodOverride("_method"));
 
 var exphbs = require("express-handlebars");
 
-var hbs = exphbs.create({
-  ifEqual: function (val1,val2,options) { 
-    if (arguments.length < 3)
-    throw new Error("Handlebars Helper equal needs 2 parameters");
-    if( lvalue!=rvalue ) {
-    return options.inverse(this);
-    } else {
-    return options.fn(this);
-  } 
-}
-});
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
