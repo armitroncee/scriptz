@@ -45,7 +45,7 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Morning</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptz}}<p>{{this.prescription_name}} </p>{{/each}} </p>
+        <p class="card-text">Med: {{#each scriptz}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/each}} </p>
       </div>  
     </div>
 
@@ -54,7 +54,7 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Lunch Time</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptzLunch}} <p>{{this.prescription_name}}</p> {{/each}}</p>
+        <p class="card-text">Med: {{#each scriptzLunch}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/each}}</p>
       </div>  
     </div>      
 
@@ -68,7 +68,7 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Dinner Time</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptzDinner}} <p>{{this.prescription_name}}</p> {{/each}}</p>
+        <p class="card-text">Med: {{#each scriptzDinner}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/each}}</p>
       </div>  
     </div>
 
@@ -77,7 +77,7 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Before Bed</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptzBed}} <p>{{this.prescription_name}}</p> {{/each}}</p>
+        <p class="card-text">Med: {{#each scriptzBed}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/each}}</p>
       </div>  
     </div>      
     </div>
@@ -96,3 +96,11 @@
       <br><br><br>
     <div class="panel-footer" align="center"><a href="/about">About Scriptz</a></div>
   </footer>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
