@@ -15,6 +15,10 @@ module.exports = function(sequelize, DataTypes) {
       Pills_Remaining:{
         type: DataTypes.INTEGER,
         allowNull:false
+      },
+      active: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
       }
 
     },{
