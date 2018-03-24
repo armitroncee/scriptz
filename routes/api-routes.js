@@ -1,16 +1,36 @@
-
 var db = require("../models")
 
-
-
-// app.get("/", function(req, res) {
-//   res.render("index");
-// });
 module.exports = function(app) {
-	app.get("/scriptz", function(req, res) {
-  // express callback response by calling burger.selectAllBurger
- db.scriptz.findAll({}).then(function(scriptzWeFound) {
-          return res.json(scriptzWeFound)
+	app.get("/api/scriptz", function(req, res) {
+ db.scriptz.findAll({}).then(function(data) {
+        return res.json(data)
     });
 });
+
+  app.delete("/api/scriptz/:id", function(req, res) {
+  var condition = req.params.id;
+
+  db.scriptz.destroy({
+    where: {
+      id: condition
+    }
+    }).then(function(data) {
+        // res.json(data);
+        res.redirect("/med-list")
+    });
+  });
+
+  app.post("/api/scriptz", function(req, res) {
+    console.log(req.body);
+
+    db.scriptz.create({
+      prescription_name: req.body.prescription_name,
+      dose: req.body.dose,
+      TimeFrame: req.body.TimeFrame,
+      Pills_Remaining: req.body.Pills_Remaining
+    }).then(function(db) {
+      console.log(db);
+      res.redirect("/med-list")
+    });
+  });
 }

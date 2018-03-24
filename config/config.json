@@ -8,15 +8,15 @@
   },
   "test": {
     "username": "root",
-    "password": "F1labslab!1",
-    "database": "database_test",
+    "password": "F1labslab",
+    "database": "scriptz_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "F1labslab!1",
-    "database": "database_production",
+    "password": "F1labslab",
+    "database": "scriptz_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
