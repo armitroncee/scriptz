@@ -67,7 +67,7 @@
 </div>
 
 <!-- Medication Table -->
-<table class="table table-hover">
+<table class="table table-hover" id="medTable">
     <thead>
         <tr>
           <th scope="col">Medication</th>
@@ -110,10 +110,10 @@
 </table> 
 
 <!-- The pill entry form  -->
+<h3>Add Medications</h3>
+<div class="containerPillEntry">
 <form>
   <fieldset>
-    <legend>Add Medications </legend>
-
     <div class="form-group">
         <label for="medicationName">Medication Name</label>
         <textarea class="form-control" id="addMedicationForms" rows="1"></textarea>
@@ -133,11 +133,13 @@
         <option>Bed Time</option>
       </select>
     </div>
+   
                   
 <!-- Submit Button -->
     <button type="submit" class="btn btn-primary" id="submit">Submit</button>
   </fieldset>
 </form>
+</div> 
 
 <!-- Deactivated Meds -->
 <div class="container-fluid">

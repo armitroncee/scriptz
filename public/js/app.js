@@ -90,6 +90,7 @@ $(document).ready(function() {
       );
     });
 });
+
 // JS to enable validation on the user name and password page
 $(document).ready(function() {
   $("#user_form")
@@ -124,6 +125,74 @@ $(document).ready(function() {
         }
       }
     })
+
+    .on("success.form.bv", function(e) {
+      $("#success_message").slideDown({ opacity: "show" }, "slow"); // Do something ...
+      $("#user_form")
+        .data("bootstrapValidator")
+        .resetForm();
+      // Prevent form submission
+      e.preventDefault();
+      // Get the form instance
+      var $form = $(e.target);
+      // Get the BootstrapValidator instance
+      var bv = $form.data("bootstrapValidator");
+      // Use Ajax to submit form data
+      $.post(
+        $form.attr("action"),
+        $form.serialize(),
+        function(result) {
+          console.log(result);
+        },
+        "json"
+      );
+    });
+});
+
+
+
+// JS for med-list page: add medication form
+$(document).ready(function(){
+  $("#addMed_form")
+    .bootstrapValidator({
+      // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+      //  http://bootstrapvalidator.votintsev.ru/settings/
+      feedbackIcons: {
+            valid: "glyphicon glyphicon-ok",
+            invalid: "glyphicon glyphicon-remove",
+            validating: "glyphicon glyphicon-refresh"
+          },
+          fields: {
+            prescription_name: {
+              validators: {
+                stringLength: {
+                  min: 2
+            },
+              notEmpty: {
+                message: "Please enter the medication name."
+              }
+            }
+          },
+            dose: {
+              validators: {
+                integer: {
+                  message: "Please enter a number."
+                }
+              }
+            },
+            Pills_Remaining: {
+              validators: {
+                integer: {
+                  message: "Please enter a number."
+                }
+              }
+            },
+            Timeframe: {
+                    required: true,
+                    minlength: 1
+            }
+          }
+        })
 
     .on("success.form.bv", function(e) {
       $("#success_message").slideDown({ opacity: "show" }, "slow"); // Do something ...

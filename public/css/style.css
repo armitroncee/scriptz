@@ -23,6 +23,24 @@ body {
   margin-bottom: 2rem;
 }
 
+.containerPillEntry {
+  padding: 100rem;
+}
+
+.medTable {
+  padding: 1rem;
+}
+
+.addMedsContainer {
+  padding: 1rem;
+  width: 50%;
+}
+#submit_addmed {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+
 /* css for sign up page  */
 /* https://codepen.io/juff03/pen/OXaXRG */
 #success_message{ display: none;}
