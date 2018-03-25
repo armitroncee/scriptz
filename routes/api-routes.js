@@ -7,18 +7,19 @@ module.exports = function(app) {
     });
 });
 
-  app.delete("/api/scriptz/:id", function(req, res) {
-  var condition = req.params.id;
-
-  db.scriptz.destroy({
-    where: {
-      id: condition
-    }
-    }).then(function(data) {
-        // res.json(data);
-        // res.redirect("/med-list")
-    });
-  });
+  app.put("/api/scriptz/:id", function (req, res){
+    var condition = req.params.id;
+    db.scriptz.update ({
+      active: false
+    },{
+      where: {
+        id: condition
+      }
+    }).then(function(db){
+      console.log(db);
+      res.redirect("/med-list");
+    })
+  })
 
   app.post("/api/scriptz", function(req, res) {
     console.log(req.body);
