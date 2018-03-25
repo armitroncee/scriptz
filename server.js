@@ -44,14 +44,14 @@ var authRoute = require('./routes/auth.js')(app,passport);
 require('./config/passport/passport.js')(passport, models.user);
 
 
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
 });
 //Sync Database
-models.sequelize.sync().then(function() {
-  console.log('Nice! Database looks fine')
-}).catch(function(err) {
-  console.log(err, "Something went wrong with the Database Update!")
-});
+// models.sequelize.sync().then(function() {
+//   console.log('Nice! Database looks fine')
+// }).catch(function(err) {
+//   console.log(err, "Something went wrong with the Database Update!")
+// });
