@@ -17,18 +17,17 @@ module.exports = function(app) {
       }
     }).then(function(db){
       console.log(db);
-      res.redirect("/med-list");
+      res.redirect("/medlist");
     })
   })
-  db.scriptz.destroy({
-    where: {
-      id: condition
-    }
-    }).then(function(data) {
-        // res.json(data);
-        res.redirect("/medlist")
-    });
-  });
+  // db.scriptz.destroy({
+  //   where: {
+  //     id: condition
+  //   }
+  //   }).then(function(data) {
+  //       // res.json(data);
+  //       res.redirect("/medlist")
+  //   });
 
   app.post("/api/scriptz", function(req, res) {
     console.log(req.body);
