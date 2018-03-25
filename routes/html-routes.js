@@ -3,19 +3,19 @@ var path = require("path");
 
 module.exports = function(app) {
 
-  app.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
+  // app.get("/home", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
 
-  app.get("/", function(req, res) {
-    res.redirect("/home")
-  });
+  // app.get("/", function(req, res) {
+  //   res.redirect("/home")
+  // });
 
   // app.get("/pill-box", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/pill-box.html"));
   // });
 
-  app.get("/pill-box", function(req,res){
+  app.get("/pillbox", function(req,res){
     db.scriptz.findAll({
       where: {
         TimeFrame: "Morning"
@@ -40,24 +40,24 @@ module.exports = function(app) {
             }
           }).then(function(bed){
             console.log(bed)
-            res.render("pill-box", {scriptz: data, scriptzDinner: dinner, scriptzLunch: lunch, scriptzBed: bed});
+            res.render("pillbox", {scriptz: data, scriptzDinner: dinner, scriptzLunch: lunch, scriptzBed: bed});
           })
         })
       })
     })
   })
 
-  app.get("/med-list", function(req, res) {
+  app.get("/medlist", function(req, res) {
     db.scriptz.findAll({}).then(function(data){
-        res.render("med-list", {scriptz: data})
+        res.render("medlist", {scriptz: data})
       });
     })
 
-  app.get("/sign-up", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/sign-up.html"));
-  });
+  // app.get("/signup", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/sign-up.html"));
+  // });
 
-  app.get("/about", function(req,res){
-    res.sendFile(path.join(__dirname, "../public/about.html"))
-  })
+  // app.get("/about", function(req,res){
+  //   res.sendFile(path.join(__dirname, "../public/about.html"))
+  // })
 }
