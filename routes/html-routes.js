@@ -55,6 +55,12 @@ module.exports = function(app) {
 
   // app.get("/signup", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../public/sign-up.html"));
+  // app.get("/med-list", function(req, res) {
+  //   db.scriptz.findAll({}).then(function(data){
+  //     var hbsObject = { scriptz: data };
+  //     res.render("med-list", hbsObject);
+  //     })
+  //   // res.sendFile(path.join(__dirname, "../public/med-list.html"));
   // });
 
   // app.get("/about", function(req,res){
