@@ -39,6 +39,13 @@ body {
   margin-top: 4px;
   margin-bottom: 6px;
 }
+.modal-content {
+  padding: 20px;
+}
+
+#medButton {
+  margin-left: 5px;
+}
 
 
 /* css for sign up page  */
