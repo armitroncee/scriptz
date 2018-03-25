@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "ninja6",
+    "password": "cjbomb69",
     "database": "scriptz_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "F1labslab",
+    "password": "cjbomb69",
     "database": "scriptz_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "F1labslab",
+    "password": "cjbomb69",
     "database": "scriptz_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
